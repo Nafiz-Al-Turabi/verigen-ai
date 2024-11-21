@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero {
+    width: 1320px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-top: 145px;
+    gap: 95px;
+}
+
+.hero-image {
+    margin-right: -585px;
+}
+
+.hero-image>img {
+    width: 100%;
+}
+
+.hero-content {
+    width: 818px;
+}
+
+.hero-title {
+    color: #1D1F2C;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.hero-description {
+    color: #373B3C;
+    font-size: 18px;
+    line-height: 150%;
+    margin-top: 16px;
+}
+
+.learn-more {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 48px;
+    border: none;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 99px;
+    background: #00AAC9;
+    margin-top: 32px;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 0 16px;
+        width: 100%;
+        align-items: center;
+        margin-top: 40px;
+        gap: 0px;
+        padding-bottom: 24px;
+    }
+    .hero-image {
+        margin-right: -285px;
+    }
+    .hero-content {
+        width: 100%;
+    }
+    .hero-title {
+        font-size:46px;
+    }
+
+    .hero-description {
+        font-size:18px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    header {
+        overflow: auto;
+        padding-bottom: 24px;
+    }
+
+    .hero {
+        padding: 0 16px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 0px;
+    }
+
+    .hero-image {
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .learn-more {
+        width: 100%;
+    }
+
+}
