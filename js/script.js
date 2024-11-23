@@ -10,7 +10,12 @@ const safeguardContent = {
             <span>Ensure Authentic Interactions:</span> By detecting overly AI-generated content in outbound communications,
             businesses can adjust messages to be more personal and engaging, strengthening customer relationships and
             increasing sales.
-        `
+        `,
+        imageContent: {
+            title: "Revenue Imapct",
+            description: "A 5% increase in customer retention can boost profits by 25% to 95% (Harvard Business Review).",
+            image: "./images/money.png"
+        }
     },
     fraud: {
         title: 'Safeguard Your Business from Fraudulent Activities',
@@ -21,7 +26,12 @@ const safeguardContent = {
         howHelps: `
             <span>AI-Powered Fraud Detection:</span> VeriGenAI identifies unusual patterns and suspicious activities
             to help businesses prevent fraud before it occurs.
-        `
+        `,
+        imageContent: {
+            title: "Revenue Imapct",
+            description: "A 5% increase in customer retention can boost profits by 25% to 95% (Harvard Business Review).",
+            image: "./images/money.png"
+        }
     },
     risk: {
         title: 'Reduce Business Risks with Advanced Insights',
@@ -32,7 +42,12 @@ const safeguardContent = {
         howHelps: `
             <span>Insightful Alerts:</span> VeriGenAI provides actionable insights, helping businesses navigate potential
             risks effectively.
-        `
+        `,
+        imageContent: {
+            title: "Revenue Imapct",
+            description: "A 5% increase in customer retention can boost profits by 25% to 95% (Harvard Business Review).",
+            image: "./images/money.png"
+        }
     }
 };
 
@@ -41,6 +56,7 @@ function updateContent(key) {
     const contentArea = document.querySelector('.safeguard-element');
 
     if (content) {
+        // console.log('Updating content for key:', key, content);
         contentArea.style.opacity = 0;
 
         setTimeout(() => {
@@ -56,12 +72,16 @@ function updateContent(key) {
                             <p>${content.howHelps}</p>
                         </div>
                     </div>
-                    <div class="safeguard-box">
-                        <h1>Revenue Impact</h1>
-                        <div class="" style="display: flex; justify-content: center;">
-                            <img src="./images/money.png" alt="">
-                        </div>
-                        <p>A 5% increase in customer retention can boost profits by 25% to 95% (<a href="">Harvard Business Review</a>)</p>
+                     <div class="safeguard-box">
+                        ${content.imageContent ? `
+                            <h1>${content.imageContent.title }</h1>
+                            <div style="display: flex; justify-content: center; margin-bottom: 12px;">
+                                <img src="${content.imageContent.image}" 
+                                     alt="${content.imageContent.title || 'Image'}" 
+                                     style="max-width: 100%; height: auto;">
+                            </div>
+                            <p>${content.imageContent.description}</p>
+                        ` : ''}
                     </div>
                 </div>
             `;
@@ -78,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.safeguard-button button').classList.add('active');
 });
 
+
 document.querySelectorAll('.safeguard-button button').forEach(button => {
     button.addEventListener('click', () => {
         const key = button.textContent.toLowerCase();
@@ -90,6 +111,11 @@ document.querySelectorAll('.safeguard-button button').forEach(button => {
         button.classList.add('active');
     });
 });
+
+
+
+
+
 
 document.getElementById('toggleBtnBars').addEventListener('click', () => {
     document.querySelector('.dropdown').classList.toggle('open'); // Your dropdown logic

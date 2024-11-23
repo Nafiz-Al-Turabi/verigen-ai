@@ -104,7 +104,7 @@ ul {
     
   }
   .mobile_logo {
-    background: linear-gradient(#81e4f1, #a7f0d7);
+    background: #ffffff02;
     padding: 10px;
     color: #fff;
     font-weight: 700;
@@ -112,6 +112,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgba(233, 233, 234, 0.2);
   }
   .mobile_container {
     width: 100%;

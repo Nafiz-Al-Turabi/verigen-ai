@@ -11,14 +11,17 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./css/navbar.css">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <header class=""
-        style="background-image: url('./images/Hero.png'); background-position: center; background-repeat: no-repeat;  background-size: cover; ">
+    <header class="">
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
@@ -41,26 +44,27 @@
         <nav class="mobile_nav">
             <div class="mobile_container">
                 <div class="mobile_logo">
-                   <div>
-                    <img src="./images/logo.png" alt="VeriGenAI">
-                    <span class="genTitle">VeriGenAI</span>
-                   </div>
-                   <i id="toggleBtnBars" class="fa fa-bars"></i>
-                   <i id="toggleBtnTimes" class="fa fa-times" style="display:none;"></i> <!-- Hide the 'times' icon initially -->
-                     </div>
-               <div class="dropdown">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Use cases</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricings</a></li>
-                    <li><a href="#">Contact us</a></li>
-                </ul>
-                <div class="buttons">
-                    <a href="#" class="is-it-ai">Is it AI?</a>
-                    <a href="#" class="signup">Signup</a>
+                    <div>
+                        <img src="./images/logo.png" alt="VeriGenAI">
+                        <span class="genTitle">VeriGenAI</span>
+                    </div>
+                    <i id="toggleBtnBars" class="fa fa-bars"></i>
+                    <i id="toggleBtnTimes" class="fa fa-times" style="display:none;"></i>
+                    <!-- Hide the 'times' icon initially -->
                 </div>
-               </div>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Use cases</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricings</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                    <div class="buttons">
+                        <a href="#" class="is-it-ai">Is it AI?</a>
+                        <a href="#" class="signup">Signup</a>
+                    </div>
+                </div>
             </div>
         </nav>
         <div class="hero">
@@ -134,7 +138,7 @@
 
         <!-- Boost Revenue and Safeguard Against AI Fraud with VeriGenAI -->
         <section class="safeguard">
-            <div class="safeguard-box"></div>
+            <div class="safeguard-box1"></div>
             <div class="safeguard-box2"></div>
             <div class="safeguard-container">
                 <div class="safeguard-content">
@@ -150,22 +154,100 @@
                         <button data-content="fraud">Fraud</button>
                         <button data-content="risk">Risk</button>
                         <button data-content="savings">Savings</button>
-                        <button  data-content="reputation">Reputation</button>
+                        <button data-content="reputation">Reputation</button>
                         <button data-content="authentic">Authentic</button>
-                        <button >Intellectual Property</button>
+                        <button data-content="intellectual">Intellectual Property</button>
                     </div>
-                    <div id="" class="safeguard-details-contents active ">
+                    <div id="" class="safeguard-details-contents ">
                         <h1>Protect and Enhance Revenue by Maintaining Authentic Customer Engagement</h1>
                         <div class="safeguard-element">
                             <!-- dynamic content -->
+
                         </div>
                     </div>
                 </div>
             </div>
 
         </section>
+
+        <!-- Take the Next Steps with VeriGenAI -->
+        <section class="next-step">
+            <div class="step-box1"></div>
+            <div class="step-box2"></div>
+            <div class="next-step-container">
+                <div class="next-step-content">
+                    <h1>Take the Next Steps with VeriGenAI</h1>
+                    <p>Start with VeriGenAI to enhance secure, authentic communication. Integrate the platform, evaluate
+                        ROI, and stay ahead by combining AI precision with human trust.</p>
+                </div>
+                <div class="next-step-main">
+                    <div class="next-step-main-step">
+                        <div data-step="1" class="main-step active">
+                            <h1>Integrate VeriGenAI</h1>
+                            <span class="step-number">1</span>
+                        </div>
+                        <div data-step="2" class="main-step">
+                            <h1>Calculate Your ROI</h1>
+                            <span class="step-number">2</span>
+                        </div>
+                        <div data-step="3" class="main-step">
+                            <h1>Stay Ahead</h1>
+                            <span class="step-number">3</span>
+                        </div>
+                    </div>
+                    <div class="next-step-card">
+                        <img src="./images/AI.png" alt="AI image">
+                        <div class="card-content">
+                            <h1>Integrate VeriGenAI</h1>
+                            <p>Start leveraging our platform to monitor and adjust your communications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step-swiper">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-step="1">
+                                <div class="next-step-card-swiper">
+                                    <img src="./images/AI.png" alt="AI image">
+                                    <div class="card-content">
+                                        <h1>Integrate VeriGenAI</h1>
+                                        <p>Start leveraging our platform to monitor and adjust your communications.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-step="2">
+                                <div class="next-step-card-swiper">
+                                    <img src="./images/AI.png" alt="AI image">
+                                    <div class="card-content">
+                                        <h1>Integrate VeriGenAI</h1>
+                                        <p>Start leveraging our platform to monitor and adjust your communications.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" data-step="3">
+                                <div class="next-step-card-swiper">
+                                    <img src="./images/AI.png" alt="AI image">
+                                    <div class="card-content">
+                                        <h1>Integrate VeriGenAI</h1>
+                                        <p>Start leveraging our platform to monitor and adjust your communications.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Swiper Navigation Dots -->
+                        <div class="swiper-pagination"></div>
+    
+                    </div>
+                </div>
+                <div class="step-button">
+                    <button>Get started</button>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="./js/script.js"></script>
+    <script src="./js/nextStep.js"></script>
 </body>
 
 </html>
