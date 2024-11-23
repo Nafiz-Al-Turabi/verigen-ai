@@ -11,13 +11,15 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./css/navbar.css">
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <header class=""
         style="background-image: url('./images/Hero.png'); background-position: center; background-repeat: no-repeat;  background-size: cover; ">
-        <nav class="nav">
+        <nav class="navbar">
             <div class="container">
                 <div class="logo">
                     <img src="./images/logo.png" alt="VeriGenAI">
@@ -34,6 +36,31 @@
                     <a href="#" class="is-it-ai">Is it AI?</a>
                     <a href="#" class="signup">Signup</a>
                 </div>
+            </div>
+        </nav>
+        <nav class="mobile_nav">
+            <div class="mobile_container">
+                <div class="mobile_logo">
+                   <div>
+                    <img src="./images/logo.png" alt="VeriGenAI">
+                    <span class="genTitle">VeriGenAI</span>
+                   </div>
+                   <i id="toggleBtnBars" class="fa fa-bars"></i>
+                   <i id="toggleBtnTimes" class="fa fa-times" style="display:none;"></i> <!-- Hide the 'times' icon initially -->
+                     </div>
+               <div class="dropdown">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Use cases</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricings</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+                <div class="buttons">
+                    <a href="#" class="is-it-ai">Is it AI?</a>
+                    <a href="#" class="signup">Signup</a>
+                </div>
+               </div>
             </div>
         </nav>
         <div class="hero">
