@@ -92,13 +92,15 @@ document.querySelectorAll('.safeguard-button button').forEach(button => {
 });
 
 document.getElementById('toggleBtnBars').addEventListener('click', () => {
-    document.querySelector('.dropdown').classList.toggle('open'); // Your dropdown logic
-    document.getElementById('toggleBtnBars').style.display = 'none';  // Hide the 'bars' icon
-    document.getElementById('toggleBtnTimes').style.display = 'inline';  // Show the 'times' icon
+    document.querySelector('.dropdown').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('toggleBtnBars').style.display = 'none'; 
+    document.getElementById('toggleBtnTimes').style.display = 'inline'; 
+});
+document.getElementById('toggleBtnTimes').addEventListener('click', () => {
+    document.querySelector('.dropdown').classList.remove('open');
+    document.body.style.overflow = ''; 
+    document.getElementById('toggleBtnTimes').style.display = 'none';
+    document.getElementById('toggleBtnBars').style.display = 'inline';
 });
 
-document.getElementById('toggleBtnTimes').addEventListener('click', () => {
-    document.querySelector('.dropdown').classList.toggle('open'); // Your dropdown logic
-    document.getElementById('toggleBtnTimes').style.display = 'none';  // Hide the 'times' icon
-    document.getElementById('toggleBtnBars').style.display = 'inline';  // Show the 'bars' icon
-});
