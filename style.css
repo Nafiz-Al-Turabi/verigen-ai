@@ -179,7 +179,10 @@ header {
 }
 
 /*  Boost Revenue and Safeguard Against AI Fraud with VeriGenAI */
-
+.safeguard{
+    width: 100%;
+    position: relative;
+}
 .safeguard-container {
     width: 1320px;
     margin: 0 auto;
@@ -361,6 +364,30 @@ header {
     background-color: #58d074;
     color: #fff;
     font-weight: bold;
+}
+
+.safeguard-box {
+    height: 303px;
+    width: 303px;
+    background: var(--Apple-400, #58D074);
+    filter: blur(292px);
+    border-radius: 50%;
+    position: absolute;
+    /* top: 30%; */
+    left: 0px;
+    z-index: -1;
+}
+
+.safeguard-box2{
+    height: 275px;
+    width: 275px;
+    background: var(--Apple-400, #58D074);
+    filter: blur(292px);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    z-index: -1;
 }
 
 
