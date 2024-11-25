@@ -4,13 +4,15 @@
   /* position: absolute;
     width: 100%; */
 }
-.mobile_nav{
+
+.mobile_nav {
   display: none;
 }
 
 .container {
   max-width: 1320px;
   margin: 0 auto;
+  padding: 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,33 +74,36 @@ ul {
   background-color: #00acc1;
   transition: 0.3s ease-in;
 }
-.genTitle{
+
+.genTitle {
   margin-top: 0px;
   margin-left: 5px;
   position: absolute;
 }
+
 .buttons .signup:hover {
   background-color: #029cb1;
 }
+
 .dropdown {
-  visibility: hidden; 
+  visibility: hidden;
   opacity: 0;
-  background-color: white; 
-  position: fixed; 
-  top: 10; 
+  background-color: white;
+  position: fixed;
+  top: 10;
   left: 0;
   width: 100%;
-  height: 100%; 
-  transform: translateY(-20px); 
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s; 
-  z-index: 1000; 
+  height: 100%;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s;
+  z-index: 1000;
 }
 
 .dropdown.open {
-  visibility: visible; 
-  opacity: 1; 
-  transform: translateY(0); 
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s; /
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s;/
 }
 
 
@@ -106,18 +111,21 @@ ul {
   .navbar {
     display: none;
   }
-  
+
   .mobile_nav {
-    /* background-color: white; */
     display: block;
     z-index: 10;
     position: fixed;
-    height: 100%;
     width: 100%;
-    
+    z-index: 999;
+
   }
+
+  .signup {
+    text-align: center;
+  }
+
   .mobile_logo {
-    background: #ffffff02;
     padding: 10px;
     padding-inline: 16px;
     color: #fff;
@@ -128,21 +136,25 @@ ul {
     align-items: center;
     border-bottom: 1px solid rgba(233, 233, 234, 0.2);
   }
+
   .mobile_container {
     width: 100%;
     display: block;
+    background: linear-gradient(45deg, #a0bdd8, #dddfe2, #a1beb2);
   }
+
   ul {
     display: flex;
     flex-direction: column;
     gap: 16px;
     text-align: center;
     padding-top: 20px;
-    
+
   }
-.dropdown li{
-  margin-top: 10px;
-}
+
+  .dropdown li {
+    margin-top: 10px;
+  }
 
   .buttons {
     display: flex;
@@ -150,6 +162,7 @@ ul {
     gap: 16px;
     padding: 20px 16px;
   }
+
   .buttons .is-it-ai {
     background-color: transparent;
     border: 1px solid #000;

@@ -22,6 +22,7 @@ header {
     width: 1320px;
     margin: 0 auto;
     align-items: center;
+    padding: 0 16px;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -191,7 +192,7 @@ header {
 .safeguard-container {
     width: 1320px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 80px 16px;
 }
 
 .safeguard-content>h1 {
@@ -407,7 +408,7 @@ header {
     margin: 0 auto;
     padding: 40px;
     overflow: hidden;
-    
+
 }
 
 .next-step-content>h1 {
@@ -487,7 +488,7 @@ header {
     box-shadow: 0px 4px 14px 0px rgba(0, 129, 153, 0.22);
 }
 
-.next-step-card-swiper{
+.next-step-card-swiper {
     display: none;
 }
 
@@ -579,6 +580,7 @@ header {
         opacity: 1;
         transform: translateX(0);
     }
+
     100% {
         opacity: 0;
         transform: translateX(-100%);
@@ -590,6 +592,7 @@ header {
         opacity: 0;
         transform: translateX(100%);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -600,10 +603,13 @@ header {
     color: #1D1F2C;
     border-radius: 4px;
 }
+
 .step-number.active-step {
-    background: #00AAC9; 
+    background: #00AAC9;
+    color: #fff;
 }
-.swiper-pagination{
+
+.swiper-pagination {
     display: none;
 }
 
@@ -959,7 +965,7 @@ header {
     }
 
     /* Take the Next Steps with VeriGenAI  */
-    .next-step-container{
+    .next-step-container {
         padding: 0;
     }
 
@@ -986,7 +992,8 @@ header {
         margin-top: 40px;
         display: none;
     }
-    .next-step-card-swiper{
+
+    .next-step-card-swiper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1003,26 +1010,27 @@ header {
         display: flex;
         justify-content: center;
     }
-    
+
     .step-button>button {
-       width: 100%;
+        width: 100%;
     }
+
     .step-swiper {
-        position: relative; 
+        position: relative;
         padding-bottom: 60px;
     }
-    
+
     .swiper-pagination {
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        bottom: -20px; 
+        bottom: -20px;
         left: 0;
         right: 0;
-        z-index: 10; 
+        z-index: 10;
     }
-    
+
     .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
@@ -1031,13 +1039,42 @@ header {
         margin: 0 5px;
         transition: transform 0.3s ease, background-color 0.3s ease;
     }
-    
+
     .swiper-pagination-bullet-active {
-        background-color: #00AAC9 !important; 
-        transform: scale(1.3); 
+        background-color: #00AAC9 !important;
+        transform: scale(1.3);
     }
-    
-    
-    
+
+
+
 }
 
+.custom-scroll {
+    /* scrollbar-width: thin; */
+    scrollbar-color: #c0c0c0;
+  }
+  
+  .custom-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scroll::-webkit-scrollbar-track {
+    background: #CCEDF4;
+  }
+  
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(0, 170, 201, 0.00) 14.69%, #00AAC9 102.15%);
+    border-radius: 0px;
+  }
+  
+  .audio-player-container:hover {
+    box-shadow: 0 4px 20px rgba(49, 122, 122, 0.6);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .audio-player-container audio {
+    background-color: #035dec;
+    /* Dark gray */
+    color: #ffffff;
+    /* White text */
+  }

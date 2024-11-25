@@ -1,37 +1,38 @@
-// Step content data
 const stepContent = {
     1: {
         title: "Integrate VeriGenAI",
         description: "Start leveraging our platform to monitor and adjust your communications.",
-        image: "./images/AI.png"
+        image: "./images/AI.png",
     },
     2: {
         title: "Calculate Your ROI",
         description: "Analyze your return on investment and measure the impact of VeriGenAI.",
-        image: "./images/AI.png"
+        image: "./images/AI.png",
     },
     3: {
         title: "Stay Ahead",
         description: "Continue optimizing your communications for sustainable growth.",
-        image: "./images/AI.png"
-    }
+        image: "./images/AI.png",
+    },
 };
 
 // Add event listeners to steps
-document.querySelectorAll('.main-step').forEach(step => {
-    step.addEventListener('click', () => {
-        const stepNumber = step.getAttribute('data-step');
+document.querySelectorAll(".main-step").forEach((step) => {
+    step.addEventListener("click", () => {
+        const stepNumber = step.getAttribute("data-step");
 
         if (stepContent[stepNumber]) {
-            document.querySelectorAll('.main-step').forEach(btn => {
-                btn.classList.remove('active');
-                btn.querySelector('.step-number').classList.remove('active-step'); 
+            document.querySelectorAll(".main-step").forEach((btn) => {
+                btn.classList.remove("active");
+                btn.querySelector(".step-number").classList.remove("active-step");
             });
-            step.classList.add('active');
 
-            const card = document.querySelector('.next-step-card');
+            step.classList.add("active");
+            step.querySelector(".step-number").classList.add("active-step");
 
-            card.classList.add('slide-out');
+            const card = document.querySelector(".next-step-card");
+
+            card.classList.add("slide-out");
             setTimeout(() => {
                 card.innerHTML = `
                     <img src="${stepContent[stepNumber].image}" alt="${stepContent[stepNumber].title}">
@@ -41,27 +42,43 @@ document.querySelectorAll('.main-step').forEach(step => {
                     </div>
                 `;
 
-                card.classList.remove('slide-out');
-                card.classList.add('slide-in');
+                card.classList.remove("slide-out");
+                card.classList.add("slide-in");
 
                 setTimeout(() => {
-                    card.classList.remove('slide-in');
-                }, 300); 
-            }, 300); 
+                    card.classList.remove("slide-in");
+                }, 300);
+            }, 300);
         }
     });
 });
 
-let swiperInstance = null; // Store the Swiper instance
+document.addEventListener("DOMContentLoaded", () => {
+    const firstStep = document.querySelector(".main-step");
+    firstStep.classList.add("active");
+    firstStep.querySelector(".step-number").classList.add("active-step");
+
+    // Initialize the first step's content in the card
+    const card = document.querySelector(".next-step-card");
+    card.innerHTML = `
+        <img src="${stepContent[1].image}" alt="${stepContent[1].title}">
+        <div class="card-content">
+            <h1>${stepContent[1].title}</h1>
+            <p>${stepContent[1].description}</p>
+        </div>
+    `;
+});
+
+let swiperInstance = null;
 
 function initializeSwiperForMobile() {
-    // Check if already initialized and destroy if needed
+
     if (swiperInstance) {
-        swiperInstance.destroy(true, true); // Destroy existing instance
-        swiperInstance = null; // Reset the instance
+        swiperInstance.destroy(true, true);
+        swiperInstance = null;
     }
 
-    if (window.innerWidth <= 768) { // Initialize only for mobile
+    if (window.innerWidth <= 768) {
         swiperInstance = new Swiper('.swiper-container', {
             loop: true,
             pagination: {
