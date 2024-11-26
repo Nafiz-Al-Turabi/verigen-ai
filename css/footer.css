@@ -14,7 +14,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 100px 16px 40px 16px;
+    padding: 100px 0px 40px 0px;
 }
 
 .footer-image-des>p {
@@ -166,6 +166,27 @@
     background: #28a746;
     color: #fff;
     transition: 0.3s ease-in;
+}
+
+@media(max-width : 1300px){
+    .footer-container {
+        width: 100%;
+        padding: 100px 16px 40px 16px;
+    }
+    .news-letter-input>input {
+        width: 100%;
+        
+    }
+
+    .news-letter-content{
+        width: 25%;
+    }
+
+    .rights-follow {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
 }
 
 @media (max-width: 1024px) {

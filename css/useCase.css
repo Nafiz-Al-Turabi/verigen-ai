@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.use-case {
+    position: relative;
+}
+
+.use-case-container {
+    width: 1320px;
+    margin: 0 auto;
+    padding: 100px 0px;
+}
+
+.use-case-container>h1 {
+    color: #1D1F2C;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.use-case-container>p {
+    width: 692.672px;
+    margin: 0 auto;
+    color: #373B3C;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.use-case-tab-container {
+    display: flex;
+    gap: 44px;
+    margin-top: 48px;
+}
+
+.use-case-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+/* .use-case-tab {
+    border-radius: 8px;
+    border: 1px solid #28A746;
+    background: #F1FCF3;
+    padding: 16px;
+} */
+
+.tab-not-open {
+    border-radius: 8px;
+    padding: 0 16px;
+    width: 531px;
+}
+
+
+.tab-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tab-header>h3 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.12px;
+}
+
+.use-case-tab>p {
+    color: #4A4C56;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.09px;
+}
+
+.use-case-visual {
+    border-radius: 24px;
+    background: #F1FCF3;
+    display: flex;
+    flex-direction: column;
+    height: 646px;
+    padding: 48px 56px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.use-case-business-value,
+.use-case-workflow {
+    background: #fff;
+    padding: 32px 40px;
+    text-align: center;
+    height: 311px;
+    border-radius: 16px;
+}
+
+.use-case-business-value>h3,
+.use-case-workflow>h3 {
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.12px;
+    margin-bottom: 16px;
+}
+
+.use-case-business-value>p,
+.use-case-workflow>p {
+    color: #4A4C56;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.09px;
+}
+
+.use-case-box1 {
+    width: 364.689px;
+    height: 364.689px;
+    border-radius: 303.349px;
+    background: var(--Apple-400, #58D074);
+    filter: blur(292px);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: -10%;
+    z-index: -1;
+}
+
+.use-case-box2 {
+    width: 364.689px;
+    height: 364.689px;
+    border-radius: 303.349px;
+    background: var(--Apple-400, #58D074);
+    filter: blur(392px);
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    z-index: -1;
+}
+
+.tab-not-open {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.use-case-tab {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.tab-not-open.active-use-case {
+    border-radius: 8px;
+    border: 1px solid #28A746;
+    background: #F1FCF3;
+    padding: 16px;
+
+}
+
+.active-use-case {
+    border-radius: 8px;
+    border: 1px solid #28A746;
+    background: #F1FCF3;
+    padding: 16px;
+    color: #4A4C56;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.09px;
+}
+
+
+@media(max-width:1300px) {
+    .use-case-container {
+        width: 100%;
+        padding: 100px 16px;
+    }
+
+}
+
+@media(max-width:1024px) {
+    .use-case-container {
+        width: 100%;
+        padding: 50px 16px;
+    }
+
+    .tab-not-open {
+        border-radius: 8px;
+        padding: 0 16px;
+        width: 431px;
+    }
+
+
+    .tab-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    .tab-header>h3 {
+        font-size: 18px;
+    }
+
+    .use-case-tab>p {
+        font-size: 14px;
+    }
+
+    .active-use-case {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:768px) {
+    .use-case-container {
+        width: 100%;
+        padding: 50px 16px;
+    }
+
+    .use-case-container>h1 {
+        font-size: 28px;
+    }
+
+    .use-case-container>p {
+        width: 100%;
+    }
+
+    .use-case-tab-container {
+        display: block;
+        width: 100%;
+    }
+    .tab-not-open {
+        padding: 0 px;
+        width: 100%;
+    }
+    .use-case-visual {
+        padding: 16px;
+        margin-top: 16px;
+    }
+
+    .use-case-business-value,
+    .use-case-workflow {
+        background: #fff;
+        padding: 16px;
+        height: 100%;
+        text-align: center;
+        border-radius: 16px;
+    }
+
+    .use-case-business-value>h3,
+    .use-case-workflow>h3 {
+        color: #000;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 0.12px;
+        margin-bottom: 16px;
+    }
+
+    .use-case-business-value>p,
+    .use-case-workflow>p {
+        color: #4A4C56;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: 0.09px;
+    }
+}

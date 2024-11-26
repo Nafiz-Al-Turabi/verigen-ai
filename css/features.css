@@ -27,6 +27,7 @@
     gap: 20px;
     height: 806px;
     overflow-y: auto;
+    overflow-x:hidden;
     padding-right: 30px;
 }
 
@@ -35,7 +36,11 @@
     padding: 32px;
     border-radius: 16px;
     background: #FFF;
-    width: 580px;
+    width: 570px;
+}
+
+.feature-s-card {
+    scroll-snap-align: center; 
 }
 
 .feature-s-header {
@@ -125,6 +130,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 160%;
+    margin-bottom: 30px;
 }
 
 .count {
@@ -139,6 +145,7 @@
     gap: 13.333px;
     border: 10.667px solid rgba(186, 225, 235, 0.82);
     background: #E5F4F8;
+    margin: 30px;
 }
 
 .count>p {
@@ -186,7 +193,27 @@
     z-index: -1;
 }
 
-@media (max-width: 1024px) {
+.feature-s-swiper{
+    display: none;
+}
+
+@media (max-width: 1300px){
+   
+    .feature-s-container{
+        width: 100%;
+        padding: 0 16px;
+    }
+    .feature-s-card {
+        width: 100%;
+    }
+    .feature-s-swiper{
+        display: none;
+    }
+    
+
+}
+
+@media (max-width: 768px) {
     .feature-s-container {
         width: 100%;
         display: flex;
@@ -201,4 +228,46 @@
     .feature-s-card {
         width: 100%;
     }
+    
+    .feature-s-cards{
+        display: none;
+    }
+
+    .feature-s-count{
+        display: none;
+    }
+    .feature-s-swiper{
+        display: block;
+        width: 100%;
+        padding-bottom: 50px;
+        position: relative;
+        /* background: #000; */
+    }
+
+    .feature-swiper .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 20px ; 
+        left: 0;
+        right: 0;
+        z-index: 10; 
+    }
+    
+    .feature-swiper .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+        background-color: rgba(1, 195, 221, 0.795);
+        border-radius: 50%;
+        margin: 0 5px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    .feature-swiper .swiper-pagination-bullet-active {
+        background-color: #00AAC9 !important; 
+        transform: scale(1.3); 
+    }
+
+    
 }

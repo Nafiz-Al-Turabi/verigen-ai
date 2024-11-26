@@ -15,7 +15,7 @@
 .contact-container {
     width: 1320px;
     margin: 0 auto;
-    padding: 100px 16px;
+    padding: 100px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -119,6 +119,23 @@ textarea:focus {
     top: 0;
     left: 0px;
     z-index: -1;
+}
+
+@media (max-width: 1320px){
+    .contact-container {
+        width: 100%;
+        padding: 0 16px;
+        display: flex;
+        gap:40px
+    }
+
+    .contact-contents {
+        width: 536px;
+    }
+
+    .form-container {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1024px) {
