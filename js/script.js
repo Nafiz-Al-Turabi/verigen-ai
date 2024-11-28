@@ -151,8 +151,7 @@ function updateContentBelow(button, key) {
                     <h1>How VeriGenAI Helps</h1>
                     <p>${content.howHelps}</p>
                 </div>
-            </div>
-            <div class="safeguard-box">
+                 <div class="safeguard-box">
                 ${content.imageContent ? ` 
                     <h1>${content.imageContent.title}</h1>
                     <div style="display: flex; justify-content: center; margin-bottom: 12px;">
@@ -163,6 +162,8 @@ function updateContentBelow(button, key) {
                     <p>${content.imageContent.description} </br> <a href="${content.imageContent.link}" target="_blank" class="safeguard-link">(${content.imageContent.linkName})</a></p>
                 ` : ''}
             </div>
+            </div>
+           
         </div>
     `;
     button.after(newContent);
