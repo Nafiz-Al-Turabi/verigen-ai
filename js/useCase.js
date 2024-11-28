@@ -18,10 +18,40 @@ const useCaseData = [
         workflow: "AI aids in fast, reliable transcription of audio medical data into readable summaries, saving time for healthcare providers.",
         businessValue: "Improve efficiency in healthcare documentation and ensure accurate patient records while minimizing human error."
     },
+    {
+        title: "Medical Transcriptions & Clinical Summaries",
+        description: "Simplify the medical transcription process by converting clinical notes and summaries into structured text.",
+        workflow: "AI aids in fast, reliable transcription of audio medical data into readable summaries, saving time for healthcare providers.",
+        businessValue: "Improve efficiency in healthcare documentation and ensure accurate patient records while minimizing human error."
+    },
+    {
+        title: "Medical Transcriptions & Clinical Summaries",
+        description: "Simplify the medical transcription process by converting clinical notes and summaries into structured text.",
+        workflow: "AI aids in fast, reliable transcription of audio medical data into readable summaries, saving time for healthcare providers.",
+        businessValue: "Improve efficiency in healthcare documentation and ensure accurate patient records while minimizing human error."
+    },
+    {
+        title: "Medical Transcriptions & Clinical Summaries",
+        description: "Simplify the medical transcription process by converting clinical notes and summaries into structured text.",
+        workflow: "AI aids in fast, reliable transcription of audio medical data into readable summaries, saving time for healthcare providers.",
+        businessValue: "Improve efficiency in healthcare documentation and ensure accurate patient records while minimizing human error."
+    },
+    {
+        title: "Medical Transcriptions & Clinical Summaries",
+        description: "Simplify the medical transcription process by converting clinical notes and summaries into structured text.",
+        workflow: "AI aids in fast, reliable transcription of audio medical data into readable summaries, saving time for healthcare providers.",
+        businessValue: "Improve efficiency in healthcare documentation and ensure accurate patient records while minimizing human error."
+    },
+    {
+        title: "Medical Transcriptions & Clinical Summaries",
+        description: "Simplify the medical transcription process by converting clinical notes and summaries into structured text.",
+        workflow: "AI aids in fast, reliable transcription of audio medical data into readable summaries, saving time for healthcare providers.",
+        businessValue: "Improve efficiency in healthcare documentation and ensure accurate patient records while minimizing human error."
+    },
 ];
 
 // Select necessary DOM elements
-const tabs = document.querySelectorAll(".use-case-tab, .tab-not-open");
+const tabs = document.querySelectorAll(".use-case-tab, .tab-not-open, .workflows");
 const workflow = document.querySelector(".use-case-workflow p");
 const businessValue = document.querySelector(".use-case-business-value p");
 const tabDescriptions = document.querySelectorAll(".tab-content"); 
