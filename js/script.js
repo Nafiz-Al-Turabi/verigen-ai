@@ -192,3 +192,19 @@ document.getElementById('toggleBtnTimes').addEventListener('click', () => {
     document.getElementById('toggleBtnTimes').style.display = 'none';
     document.getElementById('toggleBtnBars').style.display = 'inline';
 });
+
+// smooth scroll
+document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default link behavior
+        const targetId = this.getAttribute('href').slice(1); // Get target id
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth', // Smooth scrolling
+                block: 'start' // Align to the top of the section
+            });
+        }
+    });
+});
