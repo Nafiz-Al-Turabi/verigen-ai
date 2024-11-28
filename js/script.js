@@ -9,8 +9,11 @@ const safeguardContent = {
         `,
         imageContent: {
             title: "Revenue Impact",
-            description: "A 5% increase in customer retention can boost profits by 25% to 95% (Harvard Business Review).",
-            image: "./images/money.png"
+            description: "A 5% increase in customer retention can boost profits by 25% to 95%.",
+            image: "./images/money.png",
+            linkName:"Harvard Business Review",
+            link:"https://hbr.org/2014/10/the-value-of-keeping-the-right-customers"
+
         }
     },
     fraud: {
@@ -24,7 +27,9 @@ const safeguardContent = {
         imageContent: {
             title: "Cost of Data Breaches",
             description: "Fraud detection can save up to 20% of annual revenue losses.",
-            image: "./images/money.png"
+            image: "./images/Frame safegaurd6.png",
+            linkName:"IMB Security",
+            link:"https://www.ibm.com/reports/data-breach"
         }
     },
     risk: {
@@ -38,7 +43,7 @@ const safeguardContent = {
         imageContent: {
             title: "Example",
             description: "GDPR fines can reach up to €20 million or 4% Of annual global turnover.",
-            image: "./images/money.png"
+            image: "./images/Frame safegaurd5.png"
         }
     },
     savings: {
@@ -52,7 +57,7 @@ const safeguardContent = {
         imageContent: {
             title: "Resource Allocation",
             description: "Redirecting employee focus from filtering content to productive tasks increases operational efficiency.",
-            image: "./images/money.png"
+            image: "./images/Frame safegaurd4.png"
         }
     },
     reputation: {
@@ -66,7 +71,7 @@ const safeguardContent = {
         imageContent: {
             title: "Market Impact",
             description: " Brands with strong reputations can command higher prices and enjoy greater customer loyalty.",
-            image: "./images/money.png"
+            image: "./images/Frame safegaurd3.png"
         }
     },
     authentic: {
@@ -80,7 +85,7 @@ const safeguardContent = {
         imageContent: {
             title: "Customer Preference",
             description: " Consumers are willing to spend more with companies that offer personalized experiences.",
-            image: "./images/money.png"
+            image: "./images/Frame safegaurd2.png"
         }
     },
     intellectual: {
@@ -94,7 +99,8 @@ const safeguardContent = {
         imageContent: {
             title: "Brand Protection",
             description: "Safeguarding intellectual property maintains competitive positioning.",
-            image: "./images/money.png"
+            image: "./images/Frame safegaurd7.png",
+           
         }
     },
     decisioning: {
@@ -154,7 +160,7 @@ function updateContentBelow(button, key) {
                              alt="${content.imageContent.title || 'Image'}" 
                              style="max-width: 100%; height: auto;">
                     </div>
-                    <p>${content.imageContent.description}</p>
+                    <p>${content.imageContent.description} </br> <a href="${content.imageContent.link}" target="_blank" class="safeguard-link">(${content.imageContent.linkName})</a></p>
                 ` : ''}
             </div>
         </div>
@@ -201,7 +207,7 @@ function updateContent(key) {
                                      alt="${content.imageContent.title || 'Image'}" 
                                      style="max-width: 100%; height: auto;">
                             </div>
-                            <p>${content.imageContent.description}</p>
+                            <p>${content.imageContent.description} </br> <a href="${content.imageContent.link}" target="_blank" class="safeguard-link">(${content.imageContent.linkName})</a></p>
                         ` : ''}
                     </div>
                 </div>

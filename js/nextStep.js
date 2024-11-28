@@ -6,13 +6,13 @@ const stepContent = {
     },
     2: {
         title: "Calculate Your ROI",
-        description: "Analyze your return on investment and measure the impact of VeriGenAI.",
-        image: "./images/AI.png",
+        description: "Use our tools to estimate the potential financial benefits specific to your organization.",
+        image: "./images/Frame 2147225043 (7).png",
     },
     3: {
         title: "Stay Ahead",
-        description: "Continue optimizing your communications for sustainable growth.",
-        image: "./images/AI.png",
+        description: "Position your business for success by combining AI efficiency with human authenticity.",
+        image: "./images/Frame 2147225043 (8).png",
     },
 };
 
