@@ -2,13 +2,10 @@ const safeguardContent = {
     customer: {
         title: 'Protect and Enhance Revenue by Maintaining Authentic Customer Engagement',
         whyItMatters: `
-            <span>Trust Drives Sales:</span> Customers value authenticity. Overreliance on AI-generated communications
-            can erode trust, leading to decreased customer engagement and lost sales opportunities.
+            <span>Trust Drives Sales:</span> Customers value authenticity. Overreliance on AI-generated communications can erode trust, leading to decreased customer engagement and lost sales opportunities.
         `,
         howHelps: `
-            <span>Ensure Authentic Interactions:</span> By detecting overly AI-generated content in outbound communications,
-            businesses can adjust messages to be more personal and engaging, strengthening customer relationships and
-            increasing sales.
+            <span>Ensure Authentic Interactions:</span> By detecting overly AI-generated content in outbound communications, businesses can adjust messages to be more personal and engaging, strengthening customer relationships and increasing sales.
         `,
         imageContent: {
             title: "Revenue Impact",
@@ -17,17 +14,15 @@ const safeguardContent = {
         }
     },
     fraud: {
-        title: 'Safeguard Your Business from Fraudulent Activities',
+        title: 'Prevent Financial Losses from Sophisticated Al-Generated Fraud',
         whyItMatters: `
-            <span>Fraud Prevention:</span> Fraudulent activities can result in severe financial and reputational damage.
-            Proactively addressing these threats is essential for maintaining customer trust.
+            <span>Rising AI-Powered Scams:</span> AI-generated phishing emails and fraudulent communications are becoming more convincing, leading to costly security breaches.
         `,
         howHelps: `
-            <span>AI-Powered Fraud Detection:</span> VeriGenAI identifies unusual patterns and suspicious activities
-            to help businesses prevent fraud before it occurs.
+            <span>Detect Fraudulent Inbound Communications:</span>  VeriGenAI identifies AI-generated emails and messages that may be phishing attempts or scams, enabling businesses to avoid financial losses and protect sensitive information.
         `,
         imageContent: {
-            title: "Revenue Impact",
+            title: "Cost of Data Breaches",
             description: "Fraud detection can save up to 20% of annual revenue losses.",
             image: "./images/money.png"
         }
@@ -35,19 +30,87 @@ const safeguardContent = {
     risk: {
         title: 'Reduce Business Risks with Advanced Insights',
         whyItMatters: `
-            <span>Risk Mitigation:</span> Risks related to data breaches or regulatory violations can jeopardize your
-            business. Staying proactive ensures sustainability.
+            <span>Regulatory Fines Are Costly:</span> Non-compliance with regulations like GDPR or HIPAA can result in hefty fines and legal fees.
         `,
         howHelps: `
-            <span>Insightful Alerts:</span> VeriGenAI provides actionable insights, helping businesses navigate potential
-            risks effectively.
+            <span>Monitor Outbound Communications:</span>  VeriGenAI flags AI-generated content that may not meet regulatory standards, allowing for human review and adjustment to ensure compliance and avoid fines.
         `,
         imageContent: {
-            title: "Revenue Impact",
-            description: "Proactive risk management reduces liabilities by 30%.",
+            title: "Example",
+            description: "GDPR fines can reach up to €20 million or 4% Of annual global turnover.",
             image: "./images/money.png"
         }
-    }
+    },
+    savings: {
+        title: 'Reduce Business Risks with Advanced Insights',
+        whyItMatters: `
+            <span>Efficiency Equals Savings:</span>Time spent sifting through AI-generated spam or low-quality content can drain resources.
+        `,
+        howHelps: `
+            <span>Automate Content Screening:</span>  By quickly identifying AI-generated inbound communications, VeriGenAI reduces the time employees spend on filtering, saving on labor costs and increasing productivity.
+        `,
+        imageContent: {
+            title: "Resource Allocation",
+            description: "Redirecting employee focus from filtering content to productive tasks increases operational efficiency.",
+            image: "./images/money.png"
+        }
+    },
+    reputation: {
+        title: 'Protect Brand Reputation and Market Share',
+        whyItMatters: `
+            <span>Brand Trust Is Valuable: </span>  Negative perceptions due to impersonal or AI-saturated communications can harm a brand’s image.
+        `,
+        howHelps: `
+            <span>Maintain Brand Voice:</span>  Ensures outbound communications align with brand values and tone by identifying and allowing adjustments to AI-generated content, preserving brand integrity and customer trust.
+        `,
+        imageContent: {
+            title: "Market Impact",
+            description: " Brands with strong reputations can command higher prices and enjoy greater customer loyalty.",
+            image: "./images/money.png"
+        }
+    },
+    authentic: {
+        title: 'Gain Competitive Advantage by Delivering Authentic Experiences',
+        whyItMatters: `
+            <span>Differentiation Drives Growth: </span>  In markets saturated with AI-generated content, providing authentic human touchpoints can set a business apart.
+        `,
+        howHelps: `
+            <span>Enhance Personalization:</span> Enables businesses to balance AI efficiency with human authenticity, improving customer satisfaction and driving revenue growth.
+        `,
+        imageContent: {
+            title: "Customer Preference",
+            description: " Consumers are willing to spend more with companies that offer personalized experiences.",
+            image: "./images/money.png"
+        }
+    },
+    intellectual: {
+        title: 'Gain Competitive Advantage by Delivering Authentic Experiences',
+        whyItMatters: `
+            <span>Protecting Assets Saves Money:</span>  Unauthorized use of proprietary content can lead to revenue loss and legal expenses.
+        `,
+        howHelps: `
+            <span>Detect Unauthorized Content:</span> Identifies when inbound communications contain AI-generated content that may infringe on intellectual property, allowing for prompt action.
+        `,
+        imageContent: {
+            title: "Brand Protection",
+            description: "Safeguarding intellectual property maintains competitive positioning.",
+            image: "./images/money.png"
+        }
+    },
+    decisioning: {
+        title: 'Improve Decision-Making with Accurate Data',
+        whyItMatters: `
+            <span>Quality Information Leads to Better Outcomes:</span> Decisions based on manipulated or AI-generated data can result in financial losses.
+        `,
+        howHelps: `
+            <span>Validate Information Sources:</span>  Flags AI-generated reports or proposals, prompting verification and ensuring decisions are based on reliable data.
+        `,
+        imageContent: {
+            title: "Data Integrity",
+            description: "Ensuring the authenticity of information supports sound strategic planning.",
+            image: "./images/money.png"
+        }
+    },
 };
 
 function updateContentBelow(button, key) {
@@ -112,6 +175,7 @@ function updateContentBelow(button, key) {
 function updateContent(key) {
     const content = safeguardContent[key];
     const contentArea = document.querySelector('.safeguard-element');
+    
 
     if (content) {
         contentArea.style.opacity = 0;

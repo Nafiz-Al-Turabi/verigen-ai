@@ -340,7 +340,7 @@ header {
 
 }
 
-.safeguard-button>button:nth-child(7) {
+.safeguard-button>button:last-child {
     border-radius: 0px 0px 24px 0;
 }
 
@@ -367,7 +367,7 @@ header {
 .safeguard-button button {
     padding: 10px 20px;
     border: none;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     color: #000;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -375,7 +375,7 @@ header {
 
 .safeguard-button button.active {
     background-color: #58d074;
-    color: #fff;
+    color: #000000;
     font-weight: bold;
 }
 
