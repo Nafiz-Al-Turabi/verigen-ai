@@ -248,6 +248,7 @@
 
     .feature-s-card {
         width: 100%;
+        height: 500px;
     }
     
     .feature-s-cards{
@@ -263,6 +264,13 @@
     }
     .feature-swiper {
         position: relative; 
+    }
+    .feature-s-contents>h1 {
+        font-size: 20px;
+    }
+    
+    .feature-s-contents>p {
+        font-size: 14px;
     }
     div.feature-swiper .swiper-pagination {
         display: flex;

@@ -8,38 +8,38 @@ const cardsData = [
     },
     {
         id: "02",
-        img: "./images/Frame1.png",
-        title: "Robust Content Validation",
-        description: "With VeriGenAI, validate the authenticity of your content with advanced AI-powered tools, ensuring your enterprise communications meet compliance and quality standards.",
-        keyBenefit: "Assurance in the reliability of validated content.",
+        img: "./images/Frame-1.svg",
+        title: "Al Content Detection API",
+        description: "Automatically detect Al-generated content within your business operations. Whether it's outbound marketing materials or inbound reports, our proprietary algorithms provide real-time assessments, offering clear insights into the percentage of Al-generated text.",
+        keyBenefit: "Save money by automating the detection of Al-generated content, reducin manual review costs.",
     },
     {
         id: "03",
-        img: "./images/Frame1.png",
-        title: "AI-Driven Communications",
-        description: "Enhance your operational efficiency with AI-driven tools designed to optimize workflows and ensure seamless communication across your enterprise.",
-        keyBenefit: "Improved communication processes with AI-powered tools.",
+        img: "./images/Frame-2.svg",
+        title: "Developer-Friendly Integration",
+        description: "VeriGenAl integrates seamlessly into your existing systems through a developer portal designed for quick onboarding, With comprehensive documentation and support, your team can implement Al content validation without the usual technical hurdles.",
+        keyBenefit: "Rapid deployment into existing workflows, minimizing disruptions.",
     },
     {
         id: "04",
-        img: "./images/Frame1.png",
-        title: "AI-Driven Communications",
-        description: "Enhance your operational efficiency with AI-driven tools designed to optimize workflows and ensure seamless communication across your enterprise.",
-        keyBenefit: "Improved communication processes with AI-powered tools.",
+        img: "./images/Frame-3.svg",
+        title: "Scalability & Enterprise Performance",
+        description: "VeriGenAI is engineered to scale with your business. Capable of handling large-scale operations with minimal latency, the platform ensures high availability, reliability, and speed, even at enterprise levels.",
+        keyBenefit: "A scalable solution that grows with your business without compromising performance.",
     },
     {
         id: "05",
-        img: "./images/Frame1.png",
-        title: "AI-Driven Communications",
-        description: "Enhance your operational efficiency with AI-driven tools designed to optimize workflows and ensure seamless communication across your enterprise.",
-        keyBenefit: "Improved communication processes with AI-powered tools.",
+        img: "./images/Frame-4.svg",
+        title: "Actionable Reporting & Insights",
+        description: "Gain full visibility into your content validation processes with real-time reporting. Our interactive dashboards offer insights into the prevalence of AI-generated content and overall system performance, empowering data-driven decision-making at every level.",
+        keyBenefit: " Make better decisions with accurate data, avoiding costly mistakes.",
     },
     {
         id: "06",
-        img: "./images/Frame1.png",
-        title: "AI-Driven Communications",
-        description: "Enhance your operational efficienc*y with AI-driven tools designed to optimize workflows and ensure seamless communication across your enterprise.",
-        keyBenefit: "Improved communication processes with AI-powered tools.",
+        img: "./images/Frame-5.svg",
+        title: "Security & Compliance",
+        description: "VeriGenAI adheres to the most stringent security protocols and compliance standards, ensuring that your communications and content validations meet industry requirements. With built-in monitoring and automated compliance checks, you can focus on growth without worrying about security breaches or regulatory lapses.",
+        keyBenefit: " Avoid expensive penalties by ensuring all communications comply with industry regulations.",
     },
 ];
 
@@ -80,19 +80,23 @@ function initialize() {
     featureCardsContainer.addEventListener('scroll', () => {
         const cards = document.querySelectorAll('.feature-s-card');
         const containerRect = featureCardsContainer.getBoundingClientRect();
-        let closestCardIndex = 0;
-        let minDistance = Infinity;
-
+        
+        let mostVisibleCardIndex = 0;
+        let maxVisibility = 0;
+    
         cards.forEach((card, index) => {
             const cardRect = card.getBoundingClientRect();
-            const distance = Math.abs(cardRect.top - containerRect.top);
-            if (distance < minDistance) {
-                minDistance = distance;
-                closestCardIndex = index;
+            const intersectionTop = Math.max(containerRect.top, cardRect.top);
+            const intersectionBottom = Math.min(containerRect.bottom, cardRect.bottom);
+            const visibleHeight = Math.max(0, intersectionBottom - intersectionTop);
+            
+            if (visibleHeight > maxVisibility) {
+                maxVisibility = visibleHeight;
+                mostVisibleCardIndex = index;
             }
         });
-
-        updateFeatureCount(closestCardIndex + 1, cardsData.length);
+    
+        updateFeatureCount(mostVisibleCardIndex + 1, cardsData.length);
     });
 }
 
