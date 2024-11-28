@@ -225,6 +225,12 @@ header {
     flex-direction: row-reverse;
     justify-content: space-between;
 }
+.safeguard-details-sm {
+    display: none;
+}
+.safeguard-details-mobile{
+    display: none;
+}
 
 .safeguard-details-contents {
     width: 1013px;
@@ -778,6 +784,7 @@ header {
 }
 
 @media (max-width: 768px) {
+    
     header {
         overflow: auto;
         padding-bottom: 24px;
@@ -860,12 +867,22 @@ header {
         font-size: 16px;
         padding: 0 16px;
     }
-
     /*  Boost Revenue and Safeguard Against AI Fraud with VeriGenAI */
     .safeguard-container {
         width: 100%;
         padding: 40px 0;
 
+    }
+    .safeguard-cards{
+        border: 1px solid #28a746;
+        border-radius: 20px;
+        padding-inline: 16px;
+        padding-block: 32px;
+        text-align: center;
+    }
+    .safeguard-title{
+        font-size: 24px;
+        margin-bottom: 16px;
     }
 
     .safeguard-content>h1 {
@@ -890,10 +907,15 @@ header {
     }
 
     .safeguard-details {
-        display: block;
+        display: none;
         background: transparent;
         padding: 0 16px;
 
+    }
+    .safeguard-details-sm{
+        display: block;
+        background: transparent;
+        padding: 0 16px;
     }
 
     .safeguard-details-contents {
@@ -983,7 +1005,18 @@ header {
     .safeguard-button>button:nth-child(7) {
         border-radius: 24px;
     }
-
+    
+    .dynamic-content {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .safeguard-button button.active {
+        background-color: #58d074; /* Example: Change active button style */
+        color: #fff;
+    }
+    
     /* Take the Next Steps with VeriGenAI  */
     .next-step-container {
         padding: 0;

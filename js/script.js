@@ -1,4 +1,3 @@
-
 const safeguardContent = {
     customer: {
         title: 'Protect and Enhance Revenue by Maintaining Authentic Customer Engagement',
@@ -12,7 +11,7 @@ const safeguardContent = {
             increasing sales.
         `,
         imageContent: {
-            title: "Revenue Imapct",
+            title: "Revenue Impact",
             description: "A 5% increase in customer retention can boost profits by 25% to 95% (Harvard Business Review).",
             image: "./images/money.png"
         }
@@ -20,7 +19,7 @@ const safeguardContent = {
     fraud: {
         title: 'Safeguard Your Business from Fraudulent Activities',
         whyItMatters: `
-            <span>Fraud Prevention:</span> Fraudulent activities can result in severe financial and reputational damage. 
+            <span>Fraud Prevention:</span> Fraudulent activities can result in severe financial and reputational damage.
             Proactively addressing these threats is essential for maintaining customer trust.
         `,
         howHelps: `
@@ -28,8 +27,8 @@ const safeguardContent = {
             to help businesses prevent fraud before it occurs.
         `,
         imageContent: {
-            title: "Revenue Imapct",
-            description: "A 5% increase in customer retention can boost profits by 25% to 95% (Harvard Business Review).",
+            title: "Revenue Impact",
+            description: "Fraud detection can save up to 20% of annual revenue losses.",
             image: "./images/money.png"
         }
     },
@@ -44,19 +43,77 @@ const safeguardContent = {
             risks effectively.
         `,
         imageContent: {
-            title: "Revenue Imapct",
-            description: "A 5% increase in customer retention can boost profits by 25% to 95% (Harvard Business Review).",
+            title: "Revenue Impact",
+            description: "Proactive risk management reduces liabilities by 30%.",
             image: "./images/money.png"
         }
     }
 };
+
+function updateContentBelow(button, key) {
+    const content = safeguardContent[key];
+    const existingContent = button.nextElementSibling;
+
+    // If content is already displayed, animate and remove it (toggle functionality)
+    if (existingContent && existingContent.classList.contains('dynamic-content')) {
+        existingContent.style.opacity = 0;
+        existingContent.style.transform = 'translateY(-20px)';
+        setTimeout(() => existingContent.remove(), 300); // Wait for transition before removing
+        button.classList.remove('active');
+        return;
+    }
+
+    // Remove any other content blocks before showing the new one
+    document.querySelectorAll('.dynamic-content').forEach(el => el.remove());
+    document.querySelectorAll('.safeguard-button button').forEach(btn => btn.classList.remove('active'));
+
+    // Create and insert new content block below the button
+    const newContent = document.createElement('div');
+    newContent.className = 'dynamic-content';
+    newContent.innerHTML = `
+        <div class="safeguard-element-sm">
+            <div class="safeguard-cards">
+                <h1 class="safeguard-title">${content.title}</h1>
+                <div class="safeguard-card">
+                    <h1>Why It Matters</h1>
+                    <p>${content.whyItMatters}</p>
+                </div>
+                <div class="safeguard-card" style="margin-top: 24px;">
+                    <h1>How VeriGenAI Helps</h1>
+                    <p>${content.howHelps}</p>
+                </div>
+            </div>
+            <div class="safeguard-box">
+                ${content.imageContent ? ` 
+                    <h1>${content.imageContent.title}</h1>
+                    <div style="display: flex; justify-content: center; margin-bottom: 12px;">
+                        <img src="${content.imageContent.image}" 
+                             alt="${content.imageContent.title || 'Image'}" 
+                             style="max-width: 100%; height: auto;">
+                    </div>
+                    <p>${content.imageContent.description}</p>
+                ` : ''}
+            </div>
+        </div>
+    `;
+    button.after(newContent);
+    button.classList.add('active');
+
+    // Add animation classes for smooth appearance
+    setTimeout(() => {
+        newContent.style.opacity = 1;
+        newContent.style.transform = 'translateY(0)';
+    }, 10); 
+
+    // newContent.scrollIntoView({ behavior: 'smooth' });
+}
+
 
 function updateContent(key) {
     const content = safeguardContent[key];
     const contentArea = document.querySelector('.safeguard-element');
 
     if (content) {
-        // console.log('Updating content for key:', key, content);
         contentArea.style.opacity = 0;
 
         setTimeout(() => {
@@ -74,7 +131,7 @@ function updateContent(key) {
                     </div>
                      <div class="safeguard-box">
                         ${content.imageContent ? `
-                            <h1>${content.imageContent.title }</h1>
+                            <h1>${content.imageContent.title}</h1>
                             <div style="display: flex; justify-content: center; margin-bottom: 12px;">
                                 <img src="${content.imageContent.image}" 
                                      alt="${content.imageContent.title || 'Image'}" 
@@ -85,38 +142,44 @@ function updateContent(key) {
                     </div>
                 </div>
             `;
-
             contentArea.style.opacity = 1;
         }, 300);
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    updateContent('customer');
+    const isMobile = window.innerWidth <= 768;
+    const defaultKey = 'customer';
 
-    // Add active class to default button
-    document.querySelector('.safeguard-button button').classList.add('active');
+    if (isMobile) {
+        const defaultButton = document.querySelector('.safeguard-button button[data-content="customer"]');
+        updateContentBelow(defaultButton, defaultKey);
+    } else {
+        updateContent(defaultKey); 
+    }
+
+    document.querySelector('.safeguard-button button[data-content="customer"]').classList.add('active');
 });
-
 
 document.querySelectorAll('.safeguard-button button').forEach(button => {
     button.addEventListener('click', () => {
-        const key = button.textContent.toLowerCase();
+        const key = button.getAttribute('data-content');
+        const isMobile = window.innerWidth <= 768;
 
-        updateContent(key);
+        if (isMobile) {
+            updateContentBelow(button, key);
+        } else {
+            updateContent(key);
+        }
 
-        document.querySelectorAll('.safeguard-button button').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        button.classList.add('active');
+        if (!isMobile) {
+            document.querySelectorAll('.safeguard-button button').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        }
     });
 });
 
-
-
-
-
-
+// Toggle menu for mobile
 document.getElementById('toggleBtnBars').addEventListener('click', () => {
     document.querySelector('.dropdown').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -129,4 +192,3 @@ document.getElementById('toggleBtnTimes').addEventListener('click', () => {
     document.getElementById('toggleBtnTimes').style.display = 'none';
     document.getElementById('toggleBtnBars').style.display = 'inline';
 });
-
