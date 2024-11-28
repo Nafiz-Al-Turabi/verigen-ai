@@ -123,20 +123,17 @@ function updateContentBelow(button, key) {
     const content = safeguardContent[key];
     const existingContent = button.nextElementSibling;
 
-    // If content is already displayed, animate and remove it (toggle functionality)
     if (existingContent && existingContent.classList.contains('dynamic-content')) {
         existingContent.style.opacity = 0;
         existingContent.style.transform = 'translateY(-20px)';
-        setTimeout(() => existingContent.remove(), 300); // Wait for transition before removing
+        setTimeout(() => existingContent.remove(), 300); 
         button.classList.remove('active');
         return;
     }
 
-    // Remove any other content blocks before showing the new one
     document.querySelectorAll('.dynamic-content').forEach(el => el.remove());
     document.querySelectorAll('.safeguard-button button').forEach(btn => btn.classList.remove('active'));
 
-    // Create and insert new content block below the button
     const newContent = document.createElement('div');
     newContent.className = 'dynamic-content';
     newContent.innerHTML = `
@@ -169,22 +166,25 @@ function updateContentBelow(button, key) {
     button.after(newContent);
     button.classList.add('active');
 
-    // Add animation classes for smooth appearance
     setTimeout(() => {
         newContent.style.opacity = 1;
         newContent.style.transform = 'translateY(0)';
     }, 10); 
 
-    // newContent.scrollIntoView({ behavior: 'smooth' });
 }
 
 
-function updateContent(key) {
+function updateContent(key, title) {
     const content = safeguardContent[key];
     const contentArea = document.querySelector('.safeguard-element');
-    
+    const titleElement = document.querySelector('.title'); 
 
     if (content) {
+
+        if (titleElement) {
+            titleElement.innerText = content.title;
+        }
+
         contentArea.style.opacity = 0;
 
         setTimeout(() => {
@@ -200,7 +200,7 @@ function updateContent(key) {
                             <p>${content.howHelps}</p>
                         </div>
                     </div>
-                     <div class="safeguard-box">
+                    <div class="safeguard-box">
                         ${content.imageContent ? `
                             <h1>${content.imageContent.title}</h1>
                             <div style="display: flex; justify-content: center; margin-bottom: 12px;">
@@ -253,10 +253,11 @@ document.querySelectorAll('.safeguard-button button').forEach(button => {
 // Toggle menu for mobile
 document.getElementById('toggleBtnBars').addEventListener('click', () => {
     document.querySelector('.dropdown').classList.add('open');
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';  
     document.getElementById('toggleBtnBars').style.display = 'none'; 
     document.getElementById('toggleBtnTimes').style.display = 'inline'; 
 });
+
 document.getElementById('toggleBtnTimes').addEventListener('click', () => {
     document.querySelector('.dropdown').classList.remove('open');
     document.body.style.overflow = ''; 
@@ -264,17 +265,25 @@ document.getElementById('toggleBtnTimes').addEventListener('click', () => {
     document.getElementById('toggleBtnBars').style.display = 'inline';
 });
 
-// smooth scroll
+document.querySelectorAll('.dropdown a').forEach(menuItem => {
+    menuItem.addEventListener('click', () => {
+        document.querySelector('.dropdown').classList.remove('open');  
+        document.body.style.overflow = '';  
+        document.getElementById('toggleBtnTimes').style.display = 'none';  
+        document.getElementById('toggleBtnBars').style.display = 'inline';  
+    });
+});
+
 document.querySelectorAll('.navbar a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default link behavior
-        const targetId = this.getAttribute('href').slice(1); // Get target id
+        e.preventDefault(); 
+        const targetId = this.getAttribute('href').slice(1); 
         const targetSection = document.getElementById(targetId);
 
         if (targetSection) {
             targetSection.scrollIntoView({
-                behavior: 'smooth', // Smooth scrolling
-                block: 'start' // Align to the top of the section
+                behavior: 'smooth', 
+                block: 'start' 
             });
         }
     });

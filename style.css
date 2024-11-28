@@ -634,7 +634,7 @@ header {
     }
     .safeguard-container{
         width: 100%;
-        padding: 0  16px;
+        padding: 0px  16px;
 
     }
     .next-step-container{
@@ -1002,6 +1002,7 @@ header {
         display: flex;
         gap: 8px;
         flex-direction: column;
+        margin-top: 24px;
     }
 
     .safeguard-button>button {
@@ -1016,7 +1017,7 @@ header {
 
     }
 
-    .safeguard-button>button:nth-child(7) {
+    .safeguard-button>button:last-child {
         border-radius: 24px;
     }
     
