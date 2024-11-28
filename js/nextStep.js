@@ -84,10 +84,7 @@ function initializeSwiperForMobile() {
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
+            autoplay: false,
             spaceBetween: 30,
             slidesPerView: 1,
         });

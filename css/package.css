@@ -221,7 +221,7 @@ li {
         display: block;
         width: 100%;
         overflow: hidden;
-        padding: 40px 16px 60px 16px;
+        padding: 0px 16px 60px 16px;
         margin-top: 40px;
     }
     .packages {
@@ -230,7 +230,25 @@ li {
         grid-template-columns: repeat(1, 1fr);
         gap: 24px;
     }
-
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .feature {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 6px;
+        color: #4A4C56;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    .divider {
+        margin: 15px 0;
+    }
     .pricing-card.popular {
         border: 1px solid #58D074;
     }
@@ -242,7 +260,7 @@ li {
     .most-popular {
         position: absolute;
         top: -20px;
-        right: 28%;
+        right: 16px;
         border-radius: 4px;
         
     }

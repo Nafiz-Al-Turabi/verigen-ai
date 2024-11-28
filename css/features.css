@@ -12,6 +12,13 @@
 .feature-s {
     position: relative;
 }
+.feature-s>h1{
+   display: none;
+}
+.feature-s>p{
+    display: none;
+    
+}
 
 .feature-s-container {
     width: 1320px;
@@ -220,7 +227,21 @@
         gap: 20px;
         padding: 50px 16px;
     }
-
+    .feature-s>h1{
+        display: block;
+        font-size: 28px;
+        font-weight: 700;
+        padding: 0 16px;
+    }
+    .feature-s>p{
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 8px;
+        padding: 0 16px;
+        color: #4A4C56;
+        
+    }
     .feature-s-cards {
         height: 606px;
     }
@@ -242,7 +263,6 @@
     }
     .feature-swiper {
         position: relative; 
-        margin-bottom:  100px;
     }
     div.feature-swiper .swiper-pagination {
         display: flex;
