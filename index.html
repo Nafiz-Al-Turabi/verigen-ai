@@ -34,11 +34,11 @@
                     <span>VeriGenAI</span>
                 </div>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Use cases</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricings</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#use-cases">Use cases</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricings">Pricings</a></li>
+                    <li><a href="#contact-us">Contact us</a></li>
                 </ul>
                 <div class="buttons">
                     <a href="#" class="is-it-ai">Is it AI?</a>
@@ -53,22 +53,35 @@
                         <img src="./images/logo.png" alt="VeriGenAI">
                         <span class="genTitle">VeriGenAI</span>
                     </div>
-                    <i id="toggleBtnBars" class="fa fa-bars"></i>
-                    <i id="toggleBtnTimes" class="fa fa-times" style="display:none;"></i>
+                    <div class="close">
+                        <i id="toggleBtnBars" class="fa fa-bars"></i>
+                        <i id="toggleBtnTimes" class="fa fa-times" style="display:none;"></i>
+                    </div>
                     <!-- Hide the 'times' icon initially -->
                 </div>
                 <div class="dropdown">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Use cases</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricings</a></li>
-                        <li><a href="#">Contact us</a></li>
-                    </ul>
-                    <div class="buttons">
-                        <a href="#" class="is-it-ai">Is it AI?</a>
-                        <a href="#" class="signup">Signup</a>
+                    <div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Use cases</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricings</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                        <div class="buttons">
+                            <a href="#" class="is-it-ai">Is it AI?</a>
+                            <a href="#" class="signup">Signup</a>
+                        </div>
                     </div>
+                    <div class="news-letter-content-mobile">
+                        <h3>Sign up to our newsletter</h3>
+                        <p>Receive the latest news from us.</p>
+                        <div class="news-letter-input-mobile">
+                            <input type="email" placeholder="Your e-mail">
+                            <button class="input-button-mobile"><i class="fa-solid fa-paper-plane "></i></button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -262,7 +275,7 @@
             </div>
         </section>
         <!-- use case section -->
-        <section class="use-case">
+        <section id="use-cases" class="use-case">
             <div class="use-case-box1"></div>
             <div class="use-case-box2"></div>
             <div class="use-case-container">
@@ -270,15 +283,13 @@
                 <p>VeriGenAI helps businesses make more money and save costs by ensuring their communications are
                     authentic, secure, and compliant in an AI-dominated world.</p>
                 <div class="use-case-tab-container">
-                    <div class="use-case-tabs">
+                    <div class="use-case-tabs desktop">
                         <div class="use-case-tab">
                             <div class="tab-header">
                                 <img src="./images/hammer.png" alt="">
                                 <h3>Legal Document Review & Compliance</h3>
                             </div>
-                            <p class="tab-content">Verify AI-generated content in legal documents to ensure compliance
-                                and avoid misinterpretation. Maintain legal precision in contracts, agreements, and
-                                briefs.</p>
+                            <p class="tab-content"></p>
                         </div>
                         <div class="tab-not-open">
                             <div class="tab-header">
@@ -330,18 +341,18 @@
                             <p class="tab-content"></p>
                         </div>
                     </div>
-                    <div id="" class="use-case-visual">
+                    <div id="" class="use-case-visual ">
                         <div class="use-case-workflow">
                             <h3>Workflow</h3>
-                            <p>Legal firms increasingly utilize generative AI for drafting contracts, agreements, and
-                                legal briefs. However, certain documents, particularly those involving sensitive
-                                agreements or compliance requirements, must be closely reviewed to ensure they are not
-                                overly reliant on AI.</p>
+                            <p>
+                                <!-- dynamic -->
+                            </p>
                         </div>
                         <div class="use-case-business-value">
                             <h3>Business Value</h3>
-                            <p>Avoid costly legal disputes and fines by ensuring your documents are accurate and
-                                compliant. Save money by reducing errors that could lead to litigation.</p>
+                            <p>
+                                <!-- dynamic -->
+                            </p>
                         </div>
                     </div>
 
@@ -349,7 +360,7 @@
             </div>
         </section>
         <!-- Features -->
-        <section class="feature-s">
+        <section id="features" class="feature-s">
             <div class="feature-s-box1"></div>
             <div class="feature-s-box2"></div>
             <div class="feature-s-box3"></div>
@@ -423,7 +434,7 @@
             </div>
         </section>
         <!-- Price-packages -->
-        <section class="price">
+        <section id="pricings" class="price">
             <div class="price-container desktop">
                 <h1>Pricing and Packages</h1>
                 <p>Investing in VeriGenAI can save you thousands in compliance costs with our AI Powered Platform.</p>
@@ -673,7 +684,7 @@
             </table>
         </div>
         <!-- contact form -->
-        <section class="contact">
+        <section id="contact-us" class="contact">
             <div class="contact-box"></div>
             <div class="contact-container">
                 <div class="contact-contents">

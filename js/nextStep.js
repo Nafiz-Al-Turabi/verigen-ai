@@ -16,7 +16,6 @@ const stepContent = {
     },
 };
 
-// Add event listeners to steps
 document.querySelectorAll(".main-step").forEach((step) => {
     step.addEventListener("click", () => {
         const stepNumber = step.getAttribute("data-step");
@@ -95,8 +94,6 @@ function initializeSwiperForMobile() {
     }
 }
 
-// Initial Swiper setup
 initializeSwiperForMobile();
 
-// Reinitialize on resize
 window.addEventListener('resize', initializeSwiperForMobile);

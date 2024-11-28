@@ -16,7 +16,7 @@
 .use-case-container {
     width: 1320px;
     margin: 0 auto;
-    padding: 100px 0px;
+    padding: 50px 0px;
 }
 
 .use-case-container>h1 {
@@ -185,6 +185,7 @@
 }
 
 
+
 @media(max-width:1300px) {
     .use-case-container {
         width: 100%;
@@ -280,5 +281,14 @@
         font-weight: 400;
         line-height: 160%;
         letter-spacing: 0.09px;
+    }
+    .use-case-box1 {
+        display: none;
+    }
+    
+    .use-case-box2 {
+        
+      display: none;
+       
     }
 }

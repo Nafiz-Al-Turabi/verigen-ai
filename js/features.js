@@ -38,16 +38,14 @@ const cardsData = [
         id: "06",
         img: "./images/Frame1.png",
         title: "AI-Driven Communications",
-        description: "Enhance your operational efficiency with AI-driven tools designed to optimize workflows and ensure seamless communication across your enterprise.",
+        description: "Enhance your operational efficienc*y with AI-driven tools designed to optimize workflows and ensure seamless communication across your enterprise.",
         keyBenefit: "Improved communication processes with AI-powered tools.",
     },
 ];
 
-// References to DOM elements
 const featureCardsContainer = document.querySelector('.feature-s-cards');
 const featureCountElement = document.getElementById('current-feature-count');
 
-// Render cards dynamically
 function renderCards(cards) {
     featureCardsContainer.innerHTML = cards
         .map(
@@ -69,7 +67,6 @@ function renderCards(cards) {
         .join('');
 }
 
-// Update the current feature count dynamically
 function updateFeatureCount(current, total) {
     featureCountElement.textContent = `${String(current).padStart(2, '0')}/${String(total).padStart(2, '0')}`;
 }
