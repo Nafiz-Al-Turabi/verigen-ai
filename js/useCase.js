@@ -55,6 +55,8 @@ const tabs = document.querySelectorAll(".use-case-tab, .tab-not-open, .workflows
 const workflow = document.querySelector(".use-case-workflow p");
 const businessValue = document.querySelector(".use-case-business-value p");
 const tabDescriptions = document.querySelectorAll(".tab-content"); 
+const tabWorkflow = document.querySelectorAll(".tab-workflow"); 
+const tabBusinessValue = document.querySelectorAll(".tab-businessValue"); 
 const useCaseVisual = document.querySelector(".use-case-visual"); 
 
 function handleTabUpdate(index) {
@@ -71,6 +73,22 @@ function handleTabUpdate(index) {
     tabDescriptions.forEach((desc, idx) => {
         if (idx === index) {
             desc.textContent = useCaseData[idx].description;
+        } else {
+            desc.textContent = ""; 
+        }
+    });
+    tabWorkflow.forEach((desc, idx) => {
+        if (idx === index) {
+            desc.innerHTML = `<h3>Workflow</h3>
+            <p>${useCaseData[idx].workflow}<p>`
+        } else {
+            desc.textContent = ""; 
+        }
+    });
+    tabBusinessValue.forEach((desc, idx) => {
+        if (idx === index) {
+            desc.innerHTML = `<h3 class="business-h3">Business Value</h3>
+            <p>${useCaseData[idx].businessValue}<p>`
         } else {
             desc.textContent = ""; 
         }
