@@ -1029,6 +1029,10 @@ header {
         transform: translateY(-20px);
         transition: opacity 0.3s ease, transform 0.3s ease;
     }
+    .dynamic-content.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
     .safeguard-cards-sm.active{
         display: block;
     }

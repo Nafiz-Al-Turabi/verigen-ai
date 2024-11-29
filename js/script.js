@@ -47,7 +47,7 @@ const safeguardContent = {
         }
     },
     savings: {
-        title: 'Reduce Business Risks with Advanced Insights',
+        title: 'Save Operational Costs by Streamlining Communication Workflows',
         whyItMatters: `
             <span>Efficiency Equals Savings:</span>Time spent sifting through AI-generated spam or low-quality content can drain resources.
         `,
@@ -89,7 +89,7 @@ const safeguardContent = {
         }
     },
     intellectual: {
-        title: 'Gain Competitive Advantage by Delivering Authentic Experiences',
+        title: 'Prevent Intellectual Property Misuse',
         whyItMatters: `
             <span>Protecting Assets Saves Money:</span>  Unauthorized use of proprietary content can lead to revenue loss and legal expenses.
         `,
@@ -118,7 +118,6 @@ const safeguardContent = {
         }
     },
 };
-
 
 function updateContentBelow(button, key) {
     const content = safeguardContent[key];

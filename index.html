@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./css/useCase.css">
     <link rel="stylesheet" href="./css/features.css">
     <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/safegaurd.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -85,7 +86,7 @@
                 </div>
             </div>
         </nav>
-        <div  class="hero">
+        <div class="hero">
             <div class="hero-image">
                 <img src="./images/dashboard.png" alt="">
             </div>
@@ -186,16 +187,205 @@
                     </div>
                 </div>
                 <!-- only from mobile -->
-                <div class="safeguard-details-sm">
-                    <div class="safeguard-button">
-                        <button class="active" data-content="customer">Customer</button>
-                        <button data-content="fraud">Fraud</button>
-                        <button data-content="risk">Risk</button>
-                        <button data-content="savings">Savings</button>
-                        <button data-content="reputation">Reputation</button>
-                        <button data-content="authentic">Authentic</button>
-                        <button data-content="intellectual">Intellectual Property</button>
-                        <button data-content="decisioning">Decisioning</button>
+                <div class="sections-container">
+                    <div class="section">
+                        <button class="button active-safe" data-content="content1">
+                            Customer
+                        </button>
+                        <div id="content1" class="content active-safe">
+                            <h1 class="heading">Protect and Enhance Revenue by Maintaining Authentic Customer Engagement</h1>
+                            <div class="why-matters">
+                                <h2>Why It Matters</h2>
+                                <p><span>Trust Drives Sales:</span> Customers value authenticity. Overreliance on AI-generated communications can erode trust, leading to decreased customer engagement and lost sales opportunities.</p>
+                            </div>
+                            <div class="VeriGenAI-Helps">
+                                <h2>How VeriGenAI Helps</h2>
+                                <p><span>Ensure Authentic Interactions:</span> By detecting overly AI-generated content in outbound communications, businesses can adjust messages to be more personal and engaging, strengthening customer relationships and increasing sales.</p>
+                            </div>
+
+                            <div class="safe-box">
+                                <h1>Revenue lmapct</h1>
+                                <div class="safe-image">
+                                    <img src="./images/money.png" alt="">
+                                </div>
+                                <p>A 5% increase in customer retention can boost profits by 25% to 95%. <br> ( <a href="" class="safe-anc">Harvard Business Review</a> )</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <button class="button" data-content="content2">
+                           Fraud
+                        </button>
+                        <div id="content2" class="content">
+                            <h1 class="heading">Prevent Financial Losses from Sophisticated Al-Generated Fraud</h1>
+                            <div class="why-matters">
+                                <h2>Why It Matters</h2>
+                                <p><span>Rising AI-Powered Scams:</span> AI-generated phishing emails and fraudulent communications are becoming more convincing, leading to costly security breaches.</p>
+                            </div>
+                            <div class="VeriGenAI-Helps">
+                                <h2>How VeriGenAI Helps</h2>
+                                <p><span>Detect Fraudulent Inbound Communications:</span>  VeriGenAI identifies AI-generated emails and messages that may be phishing attempts or scams, enabling businesses to avoid financial losses and protect sensitive information.</p>
+                            </div>
+
+                            <div class="safe-box">
+                                <h1>Cost of Data Breaches</h1>
+                                <div class="safe-image">
+                                    <img src="./images/Frame safegaurd6.png" alt="">
+                                </div>
+                                <p>Fraud detection can save up to 20% of annual revenue losses. <br> ( <a href="" class="safe-anc">Link </a> )</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <button class="button" data-content="content3">
+                            Risk
+                        </button>
+                        <div id="content3" class="content">
+                            <h1 class="heading">Reduce Business Risks with Advanced Insights</h1>
+                            <div class="why-matters">
+                                <h2>Why It Matters</h2>
+                                <p><span>Regulatory Fines Are Costly:</span>  Non-compliance with regulations like GDPR or HIPAA can result in hefty fines and legal fees.</p>
+                            </div>
+                            <div class="VeriGenAI-Helps">
+                                <h2>How VeriGenAI Helps</h2>
+                                <p><span>Monitor Outbound Communications:</span> VeriGenAI flags AI-generated content that may not meet regulatory standards, allowing for human review and adjustment to ensure compliance and avoid fines.</p>
+                            </div>
+
+                            <div class="safe-box">
+                                <h1>Example</h1>
+                                <div class="safe-image">
+                                    <img src="./images/Frame safegaurd5.png" alt="">
+                                </div>
+                                <p>GDPR fines can reach up to €20 million or 4% Of annual global turnover.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <button class="button" data-content="content4">
+                            Savings
+                        </button>
+                        <div id="content4" class="content">
+                            <h1 class="heading">Save Operational Costs by Streamlining Communication Workflows</h1>
+                            <div class="why-matters">
+                                <h2>Why It Matters</h2>
+                                <p><span>Efficiency Equals Savings:</span> Time spent sifting through AI-generated spam or low-quality content can drain resources.</p>
+                            </div>
+                            <div class="VeriGenAI-Helps">
+                                <h2>How VeriGenAI Helps</h2>
+                                <p><span>Automate Content Screening:</span>  By quickly identifying AI-generated inbound communications, VeriGenAI reduces the time employees spend on filtering, saving on labor costs and increasing productivity.</p>
+                            </div>
+
+                            <div class="safe-box">
+                                <h1>Resource Allocation</h1>
+                                <div class="safe-image">
+                                    <img src="./images/Frame safegaurd4.png" alt="">
+                                </div>
+                                <p>Redirecting employee focus from filtering content to productive tasks increases operational efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <button class="button" data-content="content5">
+                           Reputation
+                        </button>
+                        <div id="content5" class="content">
+                            <h1 class="heading">Protect Brand Reputation and Market Share</h1>
+                            <div class="why-matters">
+                                <h2>Why It Matters</h2>
+                                <p><span>Brand Trust Is Valuable:</span> Negative perceptions due to impersonal or AI-saturated communications can harm a brand’s image.</p>
+                            </div>
+                            <div class="VeriGenAI-Helps">
+                                <h2>How VeriGenAI Helps</h2>
+                                <p><span>Maintain Brand Voice:</span> Ensures outbound communications align with brand values and tone by identifying and allowing adjustments to AI-generated content, preserving brand integrity and customer trust.</p>
+                            </div>
+
+                            <div class="safe-box">
+                                <h1>Market Impact</h1>
+                                <div class="safe-image">
+                                    <img src="./images/Frame safegaurd3.png" alt="">
+                                </div>
+                                <p>Brands with strong reputations can command higher prices and enjoy greater customer loyalty.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <button class="button" data-content="content6">
+                            Authentic
+                        </button>
+                        <div id="content6" class="content">
+                            <h1 class="heading">Gain Competitive Advantage by Delivering Authentic Experiences</h1>
+                            <div class="why-matters">
+                                <h2>Why It Matters</h2>
+                                <p><span>Differentiation Drives Growth:</span>  In markets saturated with AI-generated content, providing authentic human touchpoints can set a business apart.</p>
+                            </div>
+                            <div class="VeriGenAI-Helps">
+                                <h2>How VeriGenAI Helps</h2>
+                                <p><span>Enhance Personalization:</span> Enables businesses to balance AI efficiency with human authenticity, improving customer satisfaction and driving revenue growth.</p>
+                            </div>
+
+                            <div class="safe-box">
+                                <h1>Customer Preference</h1>
+                                <div class="safe-image">
+                                    <img src="./images/Frame safegaurd2.png" alt="">
+                                </div>
+                                <p>Consumers are willing to spend more with companies that offer personalized experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <button class="button" data-content="content7">
+                            Intellectual Property
+                        </button>
+                        <div id="content7" class="content">
+                            <h1 class="heading">Prevent Intellectual Property Misuse</h1>
+                            <div class="why-matters">
+                                <h2>Why It Matters</h2>
+                                <p><span>Protecting Assets Saves Money:</span> Unauthorized use of proprietary content can lead to revenue loss and legal expenses.</p>
+                            </div>
+                            <div class="VeriGenAI-Helps">
+                                <h2>How VeriGenAI Helps</h2>
+                                <p><span>Detect Unauthorized Content:</span> Identifies when inbound communications contain AI-generated content that may infringe on intellectual property, allowing for prompt action.</p>
+                            </div>
+
+                            <div class="safe-box">
+                                <h1>Brand Protection</h1>
+                                <div class="safe-image">
+                                    <img src="./images/Frame safegaurd7.png" alt="">
+                                </div>
+                                <p>Safeguarding intellectual property maintains competitive positioning.</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="section">
+                        <button class="button" data-content="content8">
+                            Decisioning
+                        </button>
+                        <div id="content3" class="content">
+                            <h1 class="heading">Improve Decision-Making with Accurate Data</h1>
+                            <div class="why-matters">
+                                <h2>Why It Matters</h2>
+                                <p><span>Quality Information Leads to Better Outcomes:</span> Decisions based on manipulated or AI-generated data can result in financial losses.</p>
+                            </div>
+                            <div class="VeriGenAI-Helps">
+                                <h2>How VeriGenAI Helps</h2>
+                                <p><span>Validate Information Sources:</span> Flags AI-generated reports or proposals, prompting verification and ensuring decisions are based on reliable data.</p>
+                            </div>
+
+                            <div class="safe-box">
+                                <h1>Data Integrity</h1>
+                                <div class="safe-image">
+                                    <img src="./images/money.png" alt="">
+                                </div>
+                                <p> Ensuring the authenticity of information supports sound strategic planning.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -252,7 +442,8 @@
                                     <img src="./images/Frame 2147225043 (7).png" alt="AI image">
                                     <div class="card-content">
                                         <h1>Calculate Your ROI</h1>
-                                        <p>Use our tools to estimate the potential financial benefits specific to your organization.</p>
+                                        <p>Use our tools to estimate the potential financial benefits specific to your
+                                            organization.</p>
                                     </div>
                                 </div>
                             </div>
@@ -261,7 +452,8 @@
                                     <img src="./images/Frame 2147225043 (8).png" alt="AI image">
                                     <div class="card-content">
                                         <h1>Stay Ahead</h1>
-                                        <p>Position your business for success by combining AI efficiency with human authenticity.</p>
+                                        <p>Position your business for success by combining AI efficiency with human
+                                            authenticity.</p>
                                     </div>
                                 </div>
                             </div>
@@ -399,6 +591,21 @@
                             <p class="tab-businessValue"></p>
                         </div>
                     </div>
+                    <div id="" class="use-case-visual ">
+                        <div class="use-case-workflow">
+                            <h3>Workflow</h3>
+                            <p>
+                                <!-- dynamic -->
+                            </p>
+                        </div>
+                        <div class="use-case-business-value">
+                            <h3>Business Value</h3>
+                            <p>
+                                <!-- dynamic -->
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -935,6 +1142,7 @@
     <script src="./js/packages.js"></script>
     <script src="./js/features.js"></script>
     <script src="./js/useCase.js"></script>
+    <script src="./js/safegaurd.js"></script>
 </body>
 
 </html>
