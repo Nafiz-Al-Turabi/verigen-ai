@@ -365,7 +365,6 @@ header {
     transition: opacity 0.3s ease-in-out;
     opacity: 1;
 }
-
 .safeguard-button button {
     padding: 10px 20px;
     border: none;
@@ -644,6 +643,10 @@ header {
     .next-step-container {
         width: 100%;
         padding: 50px 16px 50px 40px;
+    }
+
+    .next-step-card{
+        width: 460px;
     }
 
 }
@@ -1026,6 +1029,9 @@ header {
         transform: translateY(-20px);
         transition: opacity 0.3s ease, transform 0.3s ease;
     }
+    .safeguard-cards-sm.active{
+        display: block;
+    }
     
     .safeguard-button button.active {
         background-color: #58d074; /* Example: Change active button style */
@@ -1067,13 +1073,16 @@ header {
         justify-content: space-between;
         align-items: center;
         background: #000;
+        height: 336px;
         padding: 32px;
         border-radius: 16px;
         border: 1px solid #18E3F8;
         background: #00AAC9;
         box-shadow: 0px 4px 14px 0px rgba(0, 129, 153, 0.22);
     }
-
+    .card-content>h1{
+        font-size: 24px;
+    }
     .step-button {
         display: flex;
         justify-content: center;

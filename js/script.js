@@ -119,6 +119,7 @@ const safeguardContent = {
     },
 };
 
+
 function updateContentBelow(button, key) {
     const content = safeguardContent[key];
     const existingContent = button.nextElementSibling;

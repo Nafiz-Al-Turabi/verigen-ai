@@ -206,11 +206,10 @@ li {
     .price-container>h1 {
         width: 100%;
         font-size: 28px;
-       
     }
     .price-container>p {
         width: 100%;
-       
+        font-size: 16px;
     }
     
     .price-container {
@@ -221,7 +220,7 @@ li {
         display: block;
         width: 100%;
         overflow: hidden;
-        padding: 0px 16px 60px 16px;
+        padding: 20px 16px 60px 16px;
         margin-top: 40px;
     }
     .packages {
