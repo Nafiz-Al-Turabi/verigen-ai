@@ -355,5 +355,9 @@
       display: none;
        
     }
+
+    .use-case-visual{
+        display: none;
+    }
    
 }

@@ -860,11 +860,13 @@ header {
 
     .financial-contents>p {
         width: 100%;
+        padding: 0 16px;
     }
 
     .financial-contents>h1 {
         font-size: 28px;
         font-weight: 600;
+        padding: 0 16px;
     }
 
     .financial-contents>p {

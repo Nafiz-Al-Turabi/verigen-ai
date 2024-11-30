@@ -1,8 +1,15 @@
 .navbar {
   background: #ffffff1a;
   border-bottom: 1px solid rgba(233, 233, 234, 0.2);
-  /* position: absolute;
-    width: 100%; */
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: linear-gradient(45deg, #ACD6EF, #F4F6FA, #B2D2C6);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .mobile_nav {
@@ -111,11 +118,12 @@ ul {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s;/
 }
 
-@media(max-width:1300px){
-  .container{
+@media(max-width:1300px) {
+  .container {
     padding: 0 16px;
   }
 }
+
 @media (max-width: 768px) {
   .navbar {
     display: none;
@@ -145,8 +153,8 @@ ul {
     justify-content: space-between;
     border-bottom: 1px solid rgba(233, 233, 234, 0.2);
   }
- 
-  .close>i{
+
+  .close>i {
     font-size: 24px;
   }
 
@@ -187,16 +195,18 @@ ul {
     color: #000;
   }
 
-  .dropdown{
+  .dropdown {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   
+
   }
-.news-letter-content-mobile{
-  background: #181C23;
-  padding: 32px 16px;
-}
+
+  .news-letter-content-mobile {
+    background: #181C23;
+    padding: 32px 16px;
+  }
+
   .news-letter-content-mobile>h3 {
     color: #FFF;
     font-size: 18px;
@@ -205,22 +215,22 @@ ul {
     line-height: 130%;
     text-transform: capitalize;
     margin-bottom: 20px;
-    
-}
 
-.news-letter-content-mobile>p {
+  }
+
+  .news-letter-content-mobile>p {
     color: #A5A5AB;
     font-size: 16px;
     font-weight: 400;
     line-height: 130%;
     margin-bottom: 16px;
-}
+  }
 
-.news-letter-input-mobile {
+  .news-letter-input-mobile {
     position: relative;
-}
+  }
 
-.news-letter-input-mobile>input {
+  .news-letter-input-mobile>input {
     width: 100%;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.20);
@@ -231,11 +241,13 @@ ul {
     border: none;
     outline: none;
     color: #FFF;
-}
-.news-letter-input-mobile>input::placeholder {
-    color: #FFF; 
-}
-.input-button-mobile {
+  }
+
+  .news-letter-input-mobile>input::placeholder {
+    color: #FFF;
+  }
+
+  .input-button-mobile {
     position: absolute;
     top: 7.5px;
     right: 10px;
@@ -246,15 +258,15 @@ ul {
     border: none;
     color: #fff;
     cursor: pointer;
-}
+  }
 
-.input-button-mobile:hover {
+  .input-button-mobile:hover {
     background: #22913c;
     transition: 0.5s ease-in-out;
-}
+  }
 
-.input-butto-mobile:active {
+  .input-butto-mobile:active {
     transform: scale(0.95);
-}
+  }
 
 }

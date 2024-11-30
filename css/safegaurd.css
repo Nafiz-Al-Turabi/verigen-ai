@@ -14,6 +14,22 @@
 }
 
 @media(max-width:768px) {
+    .content {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.content.active-safe {
+    display: block;
+    max-height: 1000px; 
+    overflow: visible;
+}
+
+.button {
+    transition: all 0.3s ease;
+}
     .sections-container{
         display: block;
         margin-top: 40px;

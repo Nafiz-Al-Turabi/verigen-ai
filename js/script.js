@@ -250,6 +250,21 @@ document.querySelectorAll('.safeguard-button button').forEach(button => {
     });
 });
 
+// Select the navbar element
+const navbar = document.querySelector('.navbar');
+
+// Add an event listener to track scrolling
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    // Add the 'scrolled' class when the scroll position is greater than 50px
+    navbar.classList.add('scrolled');
+  } else {
+    // Remove the 'scrolled' class when back to the top
+    navbar.classList.remove('scrolled');
+  }
+});
+
+
 // Toggle menu for mobile
 document.getElementById('toggleBtnBars').addEventListener('click', () => {
     document.querySelector('.dropdown').classList.add('open');
